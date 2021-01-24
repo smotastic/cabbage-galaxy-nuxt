@@ -1,4 +1,6 @@
 # cabbage-galaxy
+The successor of the critically and successfully acclaimed cabbagebeyond.
+This is a Document-Tree based application, to structure and organize your Documents and Notes.
 
 ## Build Setup
 
