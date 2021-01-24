@@ -22,6 +22,7 @@
             <v-list-item-title v-text="item.title" />
           </v-list-item-content>
         </v-list-item>
+        <galaxy-list />
       </v-list>
     </v-navigation-drawer>
     <v-app-bar :clipped-left="clipped" fixed app>
@@ -67,24 +68,29 @@ export default {
   data() {
     return {
       clipped: false,
-      drawer: false,
-      fixed: false,
+      drawer: true,
+      fixed: true,
       items: [
         {
           icon: 'mdi-apps',
           title: 'Welcome',
           to: '/',
         },
+        // {
+        //   icon: 'mdi-chart-bubble',
+        //   title: 'Inspire',
+        //   to: '/inspire',
+        // },
         {
           icon: 'mdi-chart-bubble',
-          title: 'Inspire',
+          title: 'Galaxies',
           to: '/inspire',
         },
       ],
       miniVariant: false,
       right: true,
       rightDrawer: false,
-      title: 'Vuetify.js',
+      title: 'Cabbage Galaxy',
     }
   },
 }

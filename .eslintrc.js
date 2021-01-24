@@ -3,16 +3,19 @@ module.exports = {
   env: {
     browser: true,
     node: true,
+    es6: true,
   },
   parserOptions: {
     parser: 'babel-eslint',
+    ecmaVersion: 2017,
+    sourceType: 'module',
   },
   extends: [
-    '@nuxtjs',
-    'prettier',
-    'prettier/vue',
-    'plugin:prettier/recommended',
-    'plugin:nuxt/recommended',
+    // '@nuxtjs',
+    // 'prettier',
+    // 'prettier/vue',
+    // 'plugin:prettier/recommended',
+    // 'plugin:nuxt/recommended',
   ],
   plugins: ['prettier'],
   // add your custom rules here
