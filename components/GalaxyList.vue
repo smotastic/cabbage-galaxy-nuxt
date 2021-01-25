@@ -26,7 +26,7 @@
 </template>
 
 <script>
-import Service from '../service'
+import {listGalaxy, createGalaxy} from '../service'
 
 export default {
   data: () => {
@@ -36,14 +36,14 @@ export default {
     }
   },
   mounted() {
-    this.galaxies = Service.list()
+    this.galaxies = listGalaxy()
   },
   methods: {
     generateGalaxyLink(galaxy) {
       return `/galaxy/${galaxy.id}`
     },
     addGalaxy() {
-      Service.create(this.addedGalaxy).then((_) => {
+      createGalaxy(this.addedGalaxy).then((_) => {
         this.addedGalaxy = ''
       })
     },
