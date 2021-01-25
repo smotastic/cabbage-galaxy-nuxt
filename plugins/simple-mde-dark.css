@@ -429,7 +429,7 @@ span.CodeMirror-selectedtext {
     border: 1px solid #555;
     border-bottom-left-radius: 3px;
     border-bottom-right-radius: 3px;
-    color: #aaa;
+    color: #fff;
     font-family: inherit;
     font-size: 18px;
     height: auto;
@@ -564,7 +564,7 @@ span.CodeMirror-selectedtext {
 .editor-preview, .editor-preview-side {
     background-color: #444;
     box-sizing: border-box;
-    color: #aaa;
+    color: #fff;
     display: none;
     font-family: inherit;
     font-size: 18px;
