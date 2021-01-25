@@ -425,7 +425,7 @@ span.CodeMirror-selectedtext {
 }
 
 .CodeMirror {
-    background-color: #444;
+    background-color: #1E1E1E;
     border: 1px solid #555;
     border-bottom-left-radius: 3px;
     border-bottom-right-radius: 3px;
@@ -445,7 +445,7 @@ span.CodeMirror-selectedtext {
 }
 
 .CodeMirror-fullscreen {
-    background-color: #444;
+    background-color: #1E1E1E;
     border: 0;
     border-top: 1px solid #555;
     bottom: 0;
@@ -562,7 +562,7 @@ span.CodeMirror-selectedtext {
 }
 
 .editor-preview, .editor-preview-side {
-    background-color: #444;
+    background-color: #1E1E1E;
     box-sizing: border-box;
     color: #fff;
     display: none;
@@ -595,7 +595,7 @@ span.CodeMirror-selectedtext {
 }
 
 .editor-preview table, .editor-preview-side table {
-    background-color: #444;
+    background-color: #1E1E1E;
     border: 0;
     border-collapse: collapse;
     border-spacing: 0;
@@ -636,7 +636,7 @@ span.CodeMirror-selectedtext {
 }
 
 .editor-toolbar {
-    background-color: #444;
+    background-color: #1E1E1E;
     border: 1px solid #555;
     border-bottom: 0;
     border-top-left-radius: 3px;
@@ -730,7 +730,7 @@ span.CodeMirror-selectedtext {
 }
 
 .editor-toolbar.fullscreen {
-    background-color: #444;
+    background-color: #1E1E1E;
     border: 0;
     box-sizing: border-box;
     height: 58px;
@@ -763,7 +763,7 @@ span.CodeMirror-selectedtext {
 }
 
 .editor-toolbar.disabled-for-preview a:not(.no-disable) {
-    background-color: #444;
+    background-color: #1E1E1E;
     border-color: transparent;
     pointer-events: none;
     text-shadow: inherit
