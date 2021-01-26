@@ -1,11 +1,19 @@
 <template>
-  <v-container>
-    <v-row> Galaxy {{ galaxyId }}</v-row>
+  <v-container class="ps-0">
+    <v-row>
+      <v-col> Galaxy {{ galaxyId }}</v-col>
+    </v-row>
     <v-row>
       <v-col cols="3">
-        <document-tree :galaxy-id="galaxyId" />
+        <document-tree :documents="documents" />
       </v-col>
-      <v-col> <document-editor /></v-col>
+      <v-col>
+        <document-editor
+          :document="selectedDocument"
+          :galaxyId="galaxyId"
+          :saveDocument="saveDocument"
+        />
+      </v-col>
     </v-row>
   </v-container>
 </template>
@@ -14,11 +22,31 @@
 import DocumentEditor from '~/components/DocumentEditor.vue'
 import DocumentTree from '~/components/DocumentTree.vue'
 
+import { listDocument, createDocument, updateDocument } from '@/service'
+
 export default {
   components: { DocumentTree, DocumentEditor },
   props: { galaxyId: { type: String, default: '' } },
   data: () => {
-    return {}
+    return {
+      documents: [],
+      selectedDocument: {},
+    }
+  },
+  methods: {
+    saveDocument(doc) {
+      if (doc.id) {
+        updateDocument(doc).then(() => {})
+      } else {
+        createDocument({ ...doc, galaxy: this.galaxyId }).then((newDoc) => {
+          this.documents.push(newDoc)
+          this.selectedDocument = {}
+        })
+      }
+    },
+  },
+  mounted() {
+    this.documents = listDocument(this.galaxyId)
   },
 }
 </script>

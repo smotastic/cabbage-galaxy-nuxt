@@ -63,4 +63,5 @@ e.g a Character Template for Pen and Paper, where the user can fill out certain 
 
 - Label Autocompletion: Based on existing labels, i want to get an autocompletion when i begin to type my labels so i can quickly add them to an existing tree structure
 
+- Auto-save every ~10 Seconds of changed documents
 - script to generate markdown files based on name content and labels in filesystem

@@ -8,25 +8,20 @@
 </template>
 
 <script>
-import { listDocument } from '@/service'
 export default {
   props: {
-    galaxyId: {
-      type: String,
-      default: '',
+    documents: {
+      type: Array,
+      default: () => [],
     },
   },
   data: () => {
     return {
-      documents: [],
       headers: [
         { text: 'Name', value: 'name' },
         { text: 'Labels', value: 'labels' },
       ],
     }
-  },
-  mounted() {
-    this.documents = listDocument(this.galaxyId)
   },
 }
 </script>
