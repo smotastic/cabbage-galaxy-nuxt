@@ -62,3 +62,5 @@ e.g a Character Template for Pen and Paper, where the user can fill out certain 
 - Image Upload: You can upload images in a document, which will then be stored in some bucket, and can be referenced in the document
 
 - Label Autocompletion: Based on existing labels, i want to get an autocompletion when i begin to type my labels so i can quickly add them to an existing tree structure
+
+- script to generate markdown files based on name content and labels in filesystem
