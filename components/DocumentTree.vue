@@ -4,6 +4,7 @@
     :items="documents"
     :items-per-page="5"
     class="elevation-1"
+    @click:row="$emit('onRowClick', $event)"
   ></v-data-table>
 </template>
 
@@ -27,4 +28,7 @@ export default {
 </script>
 
 <style>
+tr {
+  cursor: pointer;
+}
 </style>

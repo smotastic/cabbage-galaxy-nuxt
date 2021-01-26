@@ -15,9 +15,8 @@ export const create = (doc) => {
 
 export const update = (doc) => {
     return new Promise((resolve, reject) => {
-        const existingDocIndex = this.db.document.findIndex(d => d.id === doc.id);
-        Object.assign(this.db.document[existingDocIndex], doc);
-        resolve();
+        const existingDocIndex = db.document.findIndex(d => d.id === doc.id);
+        resolve(Object.assign(db.document[existingDocIndex], doc));
     });
 }
 

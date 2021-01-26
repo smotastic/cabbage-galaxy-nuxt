@@ -5,7 +5,7 @@
     </v-row>
     <v-row>
       <v-col cols="3">
-        <document-tree :documents="documents" />
+        <document-tree :documents="documents" @onRowClick="selectDocument" />
       </v-col>
       <v-col>
         <document-editor
@@ -36,13 +36,19 @@ export default {
   methods: {
     saveDocument(doc) {
       if (doc.id) {
-        updateDocument(doc).then(() => {})
+        updateDocument(doc).then((updated) => {
+          console.log(updated);
+        })
       } else {
         createDocument({ ...doc, galaxy: this.galaxyId }).then((newDoc) => {
           this.documents.push(newDoc)
           this.selectedDocument = {}
         })
       }
+    },
+    selectDocument(doc) {
+      // TODO content wird nicht aktualisiert
+      this.selectedDocument = { ...doc }
     },
   },
   mounted() {
