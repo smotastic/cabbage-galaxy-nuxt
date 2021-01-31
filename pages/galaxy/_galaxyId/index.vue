@@ -4,7 +4,7 @@
       <v-col> Galaxy {{ galaxyId }}</v-col>
     </v-row>
     <v-row>
-      <v-col cols="12">
+      <v-col cols="12" md="3">
         <document-tree :documents="documents" @onRowClick="selectDocument" />
       </v-col>
       <v-col>
